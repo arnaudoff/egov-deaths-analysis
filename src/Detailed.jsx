@@ -5,7 +5,7 @@ import { DATA, NAMES } from "./dummyData"
 
 const Detailed = (props) => {
   let id = props.match.params.id
-  let data = DATA["2018"].map((elem, index) => [NAMES[index], parseFloat(elem), index === id ? "" : "#dc3911"])
+  let data = DATA["2018"].map((elem, index) => [NAMES[index], parseFloat(elem), index == id ? "" : "#dc3911"])
   console.log(data)
   data.unshift(["Град", "брой хора", { role: "style" }])
   const options = {
