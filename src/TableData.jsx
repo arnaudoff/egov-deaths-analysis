@@ -39,7 +39,7 @@ class TableData  extends Component {
     }
 
     handleComparisonClick =() =>{
-        let active = this.state.rows.filter((x)=>x.props.active == true).map((element) => element.props.index-1);
+        let active = this.state.rows.filter((x)=>x.props.active === true).map((element) => element.props.index-1);
         if(active.length>0)
             this.props.history.push('/comparison/'+JSON.stringify(active))
     }

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import styled from 'styled-components'
+import React from 'react';
 import { Chart } from "react-google-charts";
+import { Heading } from "./CountryMap";
 import { DATA, NAMES } from "./dummyData"
 
 const Detailed = (props) => {
   let id = props.match.params.id
-  let data = DATA["2018"].map((elem, index) => [NAMES[index], parseFloat(elem), index == id ? "" : "#dc3911"])
+  let data = DATA["2018"].map((elem, index) => [NAMES[index], parseFloat(elem), index === id ? "" : "#dc3911"])
   console.log(data)
   data.unshift(["Град", "брой хора", { role: "style" }])
   const options = {
@@ -34,14 +34,5 @@ const Detailed = (props) => {
   )
 
 }
-
-
-
-const Heading = styled.div`
-    font-size: 40px;
-    font-weight: 400;
-    padding: 50px;
-    text-align: center;
-`
 
 export default Detailed

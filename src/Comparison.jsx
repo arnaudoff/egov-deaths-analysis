@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import styled from 'styled-components'
+import React from 'react';
 import { Chart } from "react-google-charts";
 
+import { Heading } from "./CountryMap";
 import { DATA, NAMES } from "./dummyData"
 
 const CityName = (props) => {
@@ -36,12 +36,5 @@ const CityName = (props) => {
 
     )
 }
-
-const Heading = styled.div`
-    font-size: 40px;
-    font-weight: 400;
-    padding: 50px;
-    text-align: center;
-`
 
 export default CityName
